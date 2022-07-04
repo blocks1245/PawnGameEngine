@@ -19,8 +19,8 @@ public class Window {
     private static Window window = null;
 
     private Window() {
-        this.height = 1920;
-        this.width = 1080;
+        this.height = 1080;
+        this.width = 1920;
         this.title = "game";
         r = 1;
         b = 1;
