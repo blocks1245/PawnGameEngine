@@ -4,6 +4,8 @@ import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 
+import Util.Time;
+
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
@@ -19,8 +21,8 @@ public class Window {
     private static Window window = null;
 
     private Window() {
-        this.height = 1920;
-        this.width = 1080;
+        this.height = 1080;
+        this.width = 1920;
         this.title = "game";
         r = 1;
         b = 1;
@@ -96,6 +98,9 @@ public class Window {
     }
 
     public void loop() {
+        float beginTime = Time.getTime();
+        
+
         while (!glfwWindowShouldClose(glfwWindow)) {
             // Poll events
             glfwPollEvents();
